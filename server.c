@@ -6,7 +6,7 @@
 /*   By: chayashi <caarlostol@student.42.rio>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 18:26:11 by chayashi          #+#    #+#             */
-/*   Updated: 2024/03/06 17:49:11 by chayashi         ###   ########.fr       */
+/*   Updated: 2024/03/07 15:14:35 by chayashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ int	main(void)
 		ft_printf("PID ERROR\n");
 		return (1);
 	}
+	ft_printf("Welcome!\n");
 	ft_printf("PID: %d\n", pid);
 	ft_printf("--------------------------------------------------\n");
 	while (1)

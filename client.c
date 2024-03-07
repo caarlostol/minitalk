@@ -6,7 +6,7 @@
 /*   By: chayashi <caarlostol@student.42.rio>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 18:26:19 by chayashi          #+#    #+#             */
-/*   Updated: 2024/03/06 17:42:36 by chayashi         ###   ########.fr       */
+/*   Updated: 2024/03/07 13:53:31 by chayashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	send_char(int pid, char c)
 	}
 }
 
-void	mhandler(int signum)
+void	handler(int signum)
 {
 	if (signum == SIGUSR1)
 		ft_printf("Message received successfully!\n");
@@ -56,7 +56,7 @@ int	main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		ft_printf("ERROR: ./client <PID> <\"Message\">\n");
+		ft_printf("ERROR\nYou must write ./client <PID> <\"Message\">\n");
 		return (1);
 	}
 	pid = ft_atoi(argv[1]);
@@ -66,7 +66,7 @@ int	main(int argc, char **argv)
 		ft_printf("ERROR: Invalid arguments!\n");
 		return (1);
 	}
-	signal(SIGUSR1, &mhandler);
+	signal(SIGUSR1, &handler);
 	send_message(pid, str);
 	return (0);
 }
