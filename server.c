@@ -6,7 +6,7 @@
 /*   By: chayashi <caarlostol@student.42.rio>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 18:26:11 by chayashi          #+#    #+#             */
-/*   Updated: 2024/03/08 15:54:04 by chayashi         ###   ########.fr       */
+/*   Updated: 2024/03/08 19:02:18 by chayashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ void	handler(int signal)
 		i = 0;
 		c = 0;
 	}
-	
 }
 
 int	main(void)
@@ -49,7 +48,7 @@ int	main(void)
 	}
 	ft_printf("Welcome!\n");
 	ft_printf("PID: %d\n", pid);
-	ft_printf("--------------------------------------------------------------------\n");
+	ft_printf("------------------------------\n");
 	signal(SIGUSR1, handler);
 	signal(SIGUSR2, handler);
 	while (1)
